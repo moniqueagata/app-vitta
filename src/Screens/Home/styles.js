@@ -10,55 +10,82 @@ export default StyleSheet.create({
 
   scroll: {
     width: '100%',
-    paddingVertical: 20
   },
 
   header: {
     width: '100%',
-    height: 100,
+    height: 88,
+    justifyContent:'flex-start',
+    alignItems: 'center',
+    paddingTop: 20,
+    paddingHorizontal: 22,
     flexDirection: 'row',
+    gap: 20
+  },
+
+  msgHeader: {
+    width: '80%',
+    justifyContent: 'center',
+  },
+
+  nome: {
+    fontSize: 25,
+    fontWeight: '500',
+    color: '#00382A',
+  },
+
+  desc: {
+    fontSize: 16,
+    fontWeight: '400',
+    color: '#071E27',
+  },
+
+  content: {
+    width: '100%',
     justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingHorizontal: 30
+    paddingVertical: 22,
+    marginTop: 20,
+    gap: 35,
   },
 
-  textHeader: {
-    fontSize: 30,
-    fontWeight: '700',
-    color: '#354A53'
-  },
-
-  session: {
-    flex: 1,
-    width: '100%',
-    alignItems: 'center',
-  },
-
-  botoes: {
+  row: {
     width: '100%',
     flexDirection: 'row',
-    height: 200,
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 44
+    gap: 35
   },
 
   button: {
+    width: 170,
+    height: 170,
     backgroundColor: '#fff',
-    width: 160,
-    height: 160,
+    borderRadius: 11,
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: 11,
     borderWidth: 1,
-    borderColor: '#ddd'
+    borderColor: '#eee',
+    shadowColor: '#999999',
+    shadowOffset: {width: 0, height: 1},
+    shadowOpacity: 0.2,
+    shadowRadius: 5,  
+    gap: 15
+  },
+
+  circle: {
+    width: 70,
+    height: 70,
+    backgroundColor: '#effff8',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: '100%'
   },
 
   textButton: {
-    color: '#515151',
-    fontSize: 19,
-    fontWeight: '400',
-    paddingTop: 18
+    fontSize: 20,
+    fontWeight: '500',
+    letterSpacing: 0.5,
+    color: '#006B54'
   },
 
 
