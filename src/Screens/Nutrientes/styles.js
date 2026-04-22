@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F8FAFA',
+    backgroundColor: '#fcfcfc',
     alignItems: 'center',
     justifyContent: 'space-between',
   },
@@ -14,29 +14,26 @@ export default StyleSheet.create({
 
   header: {
     width: '100%',
-    height: 80,
-    flexDirection: 'row',
-    justifyContent: 'flex-start',
+    height: 88,
+    justifyContent:'flex-start',
     alignItems: 'center',
+    paddingTop: 10,
     paddingHorizontal: 20,
-    marginTop: 10
+    flexDirection: 'row',
+    gap: 20
   },
 
-  buttonSaida: {
+  buttonHeader: {
     width: 40,
     height: 40,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#EFF1F1',
-    paddingRight: 3,
-    borderRadius: 20,
   },
 
   textHeader: {
-    fontSize: 29,
+    fontSize: 27,
     fontWeight: '500',
-    color: '#1E333C',
-    paddingLeft: '10%'
+    color: '#00382A',
   },
 
   session: {

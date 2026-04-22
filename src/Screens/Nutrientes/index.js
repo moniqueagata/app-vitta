@@ -10,18 +10,17 @@ export default function Nutrientes() {
 
   return (
     <View style={styles.container}>
+      <View style={styles.header}>
+        <Pressable style={styles.buttonHeader} onPress={() => navigation.navigate('Home')}>
+          <Image source={require('../../../assets/img/arrow.png')}
+            style={{ width: 28, height: 28 }}
+            resizeMode='contain'
+            tintColor= '#00382A'
+          />
+        </Pressable>
+        <Text style={styles.textHeader}>Vacinas</Text>
+      </View>
       <ScrollView style={styles.scroll} showsVerticalScrollIndicator={false}>
-        <View style={styles.header}>
-          <Pressable style={styles.buttonSaida} onPress={() => navigation.navigate('Home')}>
-            <Image source={require('../../../assets/img/arrow.png')}
-              style={{ width: 20, height: 20 }}
-              resizeMode='contain'
-              tintColor= '#1E333C'
-            />
-          </Pressable>
-          <Text style={styles.textHeader}>Nutrientes</Text>
-        </View>
-        
         <View style={styles.session}>
           <View style={styles.content}>
             <Text style={styles.titulo}>Pesquise o nome de uma fruta</Text>

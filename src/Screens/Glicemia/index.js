@@ -16,7 +16,7 @@ export default function Glicemia() {
 
     const valor = parseInt(glicemia);
 
-    // Status e cores
+    // Status 
     const status = valor >= 126 ? 'Diabetes' : valor >= 100 ? 'Pré-Diabete' : 'Normal';
     const corStatus = valor >= 126 ? '#eb2e2e' : valor >= 100 ? '#e76800' : '#1cc206';
 
@@ -36,63 +36,29 @@ export default function Glicemia() {
   
   return (
     <View style={styles.container}>
+      <View style={styles.header}>
+        <Pressable style={styles.buttonHeader} onPress={() => navigation.navigate('Home')}>
+          <Image source={require('../../../assets/img/arrow.png')}
+            style={{ width: 28, height: 28 }}
+            resizeMode='contain'
+            tintColor= '#00382A'
+          />
+        </Pressable>
+        <Text style={styles.textHeader}>Glicemia</Text>
+      </View>
       <ScrollView style={styles.scroll} showsVerticalScrollIndicator={false}>
-        <View style={styles.header}>
-          <Pressable style={styles.buttonSaida} onPress={() => navigation.navigate('Home')}>
-            <Image source={require('../../../assets/img/arrow.png')}
-              style={{ width: 28, height: 28 }}
-              resizeMode='contain'
-              tintColor= '#00382A'
-            />
-          </Pressable>
-          <Text style={styles.textHeader}>Glicemia</Text>
-        </View>
-        <View style={styles.session}>
-          <View style={styles.card}>
+        <View style={styles.content}>
+          <View style={styles.session}>
+            <Text style={styles.titulo}>Sua glicemia atual</Text>
             <View style={styles.row}>
-            <Text style={styles.label}>Glicemia</Text>
-              <TextInput
-                style={styles.input}
-                keyboardType='numeric'
-                maxLength={3}
-                placeholder='--'
-                value={glicemia}
-                onChangeText={setGlicemia}
-              />
-              <Text style={styles.desc}>mg/dL</Text>
+              <Text style={styles.glicemia}>108</Text>
+              <Text style={styles.desc}>mg/dl</Text>
             </View>
-            <View style={styles.row}>
-            <Text style={styles.label}>Obs</Text>
-              <TextInput
-                style={styles.input}
-                value={observacao}
-                onChangeText={setObservacao}
-                placeholder='Em jejum'
-              />
+
+            <View>
+              <Text>Tipo</Text>
             </View>
           </View>
-
-          <Pressable style={styles.button} onPress={adicionarRegistro}>
-            <Text style={styles.textButton}>Adicionar</Text>
-          </Pressable>
-
-          <Text style={styles.titulo}>Histórico</Text>
-
-            {historico.map((item) =>(
-              <View style={styles.cardHistorico}>
-                <View style={styles.headerCard}>
-                  <Text style={styles.textData}>{item.data}</Text>
-                  <View style={[styles.tag, { backgroundColor: item.cor }]}>
-                    <Text style={styles.textTipo}>{item.tipo}</Text>
-                  </View>
-                </View>
-                <View style={styles.bodyCard}>
-                  <Text style={styles.textValor}>{item.valor}</Text>
-                  <Text style={styles.textSmall}>mg/dL</Text>
-                  <Text style={styles.textObs}>{item.obs}</Text>
-                </View>
-              </View>
-            ))}
         </View>
       </ScrollView>
       <StatusBar style="auto" />

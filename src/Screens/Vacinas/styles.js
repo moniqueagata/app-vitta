@@ -59,7 +59,7 @@ export default StyleSheet.create({
   button: {
     minWidth: 150,
     height: 47,
-    backgroundColor: '#EFF1F1',
+    backgroundColor: '#ccc',
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 30,
@@ -70,7 +70,7 @@ export default StyleSheet.create({
     fontSize: 20,
     fontWeight: '500',
     letterSpacing: 0.5,
-    color: '#657A85'
+    color: '#fff'
   },
 
   card: {
